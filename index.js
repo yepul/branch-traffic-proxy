@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const port = 3000;
 const cors = require("cors");
 const axios = require("axios");
 
@@ -38,6 +37,7 @@ app.get("/appointment-app/branch-traffic/:id", async (req, res) => {
     });
 });
 
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
